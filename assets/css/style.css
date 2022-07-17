@@ -20,7 +20,7 @@ body{
     width: 80%;
     height: 80vh;
     display: flex;
-    box-shadow: 5px 5px 50px rgba(0, 0, 0, .50);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
 }
 
 .form-image{
@@ -39,9 +39,9 @@ body{
 .form{
     width: 50%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     background-color: #fff;
     padding: 3rem;
 }
@@ -105,6 +105,7 @@ border-radius: 10px;
     border: none;
     border-radius: 10px;
     box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
 }
 
 .input-box input:hover{
@@ -117,11 +118,12 @@ border-radius: 10px;
 
 
 .input-box label,
-.gender-title h6{
+.gender-title h6 {
     font-size: 0.75rem;
     font-weight: 600;
     color: #000000c0;
 }
+
 
 .input-box input::placeholder{
     color: #000000be;
@@ -131,7 +133,7 @@ border-radius: 10px;
     display: flex;
     justify-content: space-between;
     margin-top: 0.62rem;
-    padding: 0 0.5rem;
+    padding: 0 .5rem;
 }
 
 .gender-input{
@@ -171,3 +173,40 @@ border-radius: 10px;
 }
 
 
+@media screen and (max-width: 1330px) {
+.form-image{
+        display: none;
+    }
+    
+.container{
+    width: 50%;
+}
+.form{
+    width: 100%;
+}
+}
+
+@media  screen and (max-width: 1064px) {
+.container{
+    width: 90%;
+    height: auto;
+}
+.input-group{
+    flex-direction: column;
+    overflow-y: scroll;
+    flex-wrap: nowrap;
+    max-height: 10rem;
+    padding-right: 5rem;
+}
+.gender-input{
+    margin-top: 2rem;
+}
+
+.gender-group{
+    flex-direction: column;
+}
+
+.gender-group{
+    margin-top: 0.5rem;
+}
+}
